@@ -23,7 +23,7 @@
 
      
 
-            <input type="submit" value="Log In" />
+            <button id="login" @click="login" >Log In</button>
         </form>
         <div class="forgot-password">
             <a href="#">The DOTA2 Data </a>
@@ -38,7 +38,13 @@
 </div>
 </template>
 <script>
-
+export default {
+    methods:{
+    login(){
+    this.$router.push('/home')
+    }
+}
+}
 </script>
 
 <style>
@@ -174,8 +180,8 @@ input[type=email]:focus {
     border: 1px solid #373b3d;
 }
 
-input[type=submit] {
-    padding: 13px 29px;
+#login {
+    padding: 13px 30px;
     background: #373E4A;
     color: #C1C3C6;
     font-weight: bold;
@@ -184,7 +190,7 @@ input[type=submit] {
     border-radius: 3px;
     margin: 18px 0;
     position:relative;
-    right:54px;
+    right:63px;
 }
 
 
@@ -244,4 +250,7 @@ input[type=submit] {
     color:white;
     font-size:18px;
 }
+button:active {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
 </style>
